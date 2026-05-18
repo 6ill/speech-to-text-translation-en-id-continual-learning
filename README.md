@@ -10,6 +10,7 @@ This repository connects the frontend and backend services via Git submodules.
 
 * **[Frontend Submodule](./frontend):** A React, Vite, and TypeScript web application providing the user interface for crowdsourcing corrections, media uploads, and administrative reviews.
 * **[Backend Submodule](./backend):** A FastAPI application powered by Celery workers, handling heavy ML inference, data management, and the MLflow QLoRA fine-tuning pipeline.
+* **[Fine-Tuning and Evaluation Submodule](./ft-eval):** A machine learning toolkit containing independent Jupyter notebooks for fine-tuning Large Language Models (LLMs) for translation and Automated Speech Recognition (ASR) models. It also includes evaluation scripts using BLEU and WER metrics.
 
 ## High-Level Architecture & Workflow
 
