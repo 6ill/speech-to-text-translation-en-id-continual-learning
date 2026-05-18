@@ -4,3 +4,6 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/6ill/api-speech-text-translation-crowdsourcing-app
+[submodule "ft-eval"]
+	path = ft-eval
+	url = https://github.com/HizkiaJustine/speech-to-text-translation-en-id-ft-eval.git
