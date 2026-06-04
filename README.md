@@ -16,7 +16,7 @@ This repository connects the frontend and backend services via Git submodules.
 
 The system is designed around a continuous feedback loop:
 
-1. **Inference:** Users upload media via the frontend. The backend queues asynchronous Celery tasks to generate initial transcriptions (via Whisper) and translations (via Qwen3).
+1. **Inference:** Users upload media via the frontend. The backend queues asynchronous Celery tasks to generate initial transcriptions (via Whisper) and translations (via Qwen2.5).
 2. **Crowdsourcing Correction:** Users review, edit, and correct the machine-generated text using the frontend's synchronized timestamp editor.
 3. **Administrative Validation:** Administrators review the pending user-submitted corrections and approve high-quality, verified data.
 4. **Continual Learning Pipeline:** Approved corrections are aggregated to trigger an automated training pipeline. The models are fine-tuned via QLoRA, evaluated using backward transfer metrics (WER/BLEU), and logged via MLflow for deployment.
@@ -42,4 +42,4 @@ Core Technologies
 - Client: React, TypeScript, Tailwind CSS, shadcn-ui, TanStack Query
 - API & Asynchronous Workers: FastAPI, Python, Celery, Redis
 - Data & Object Storage: PostgreSQL (SQLModel), MinIO/S3
-- Machine Learning & MLOps: OpenAI Whisper, Qwen3, MLflow, HuggingFace PEFT (QLoRA)
+- Machine Learning & MLOps: OpenAI Whisper, Qwen2.5, MLflow, HuggingFace PEFT (QLoRA)
